@@ -4,6 +4,9 @@ version := "0.1"
 
 scalaVersion := "2.13.6"
 
+// https://mvnrepository.com/artifact/ru.tinkoff.invest/openapi-java-sdk-core
+libraryDependencies += "ru.tinkoff.invest" % "openapi-java-sdk-core" % "0.4.1"
+
 scalacOptions ++= Seq(
   "-deprecation",                  // Emit warning and location for usages of deprecated APIs.
   "-explaintypes",                 // Explain type errors in more detail.
