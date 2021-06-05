@@ -4,6 +4,10 @@ version := "0.1"
 
 scalaVersion := "2.13.6"
 
+val finagleVersion = "20.8.1"
+
+libraryDependencies += "com.twitter" %% "finagle-http" % finagleVersion
+
 // https://mvnrepository.com/artifact/ru.tinkoff.invest/openapi-java-sdk-core
 libraryDependencies += "ru.tinkoff.invest" % "openapi-java-sdk-core" % "0.4.1"
 
@@ -25,7 +29,6 @@ scalacOptions ++= Seq(
   "-Xlint:inaccessible",           // Warn about inaccessible types in method signatures.
   "-Xlint:infer-any",              // Warn when a type argument is inferred to be `Any`.
   "-Xlint:missing-interpolator",   // A string literal appears to be missing an interpolator id.
-  "-Xlint:nullary-override",       // Warn when non-nullary `def f()' overrides nullary `def f'.
   "-Xlint:nullary-unit",           // Warn when nullary methods return Unit.
   "-Xlint:option-implicit",        // Option.apply used implicit view.
   "-Xlint:package-object-classes", // Class or object defined in package object.
@@ -42,7 +45,6 @@ scalacOptions ++= Seq(
   "-Ywarn-unused:params",          // Warn if a value parameter is unused.
   "-Ywarn-unused:patvars",         // Warn if a variable bound in a pattern is unused.
   "-Ywarn-unused:privates",        // Warn if a private member is unused.
-  //  "-Ywarn-value-discard",          // Warn when non-Unit expression results are unused.
   "-Ybackend-parallelism",
   "8",                                         // Enable paralellisation — change to desired number!
   "-Ycache-plugin-class-loader:last-modified", // Enables caching of classloaders for compiler plugins
