@@ -5,11 +5,15 @@ version := "0.1"
 scalaVersion := "2.13.6"
 
 val finagleVersion = "20.8.1"
+val circeVersion   = "0.13.0"
 
 libraryDependencies += "com.twitter" %% "finagle-http" % finagleVersion
 
-// https://mvnrepository.com/artifact/ru.tinkoff.invest/openapi-java-sdk-core
-libraryDependencies += "ru.tinkoff.invest" % "openapi-java-sdk-core" % "0.4.1"
+libraryDependencies ++= Seq(
+  "io.circe" %% "circe-core"    % circeVersion,
+  "io.circe" %% "circe-generic" % circeVersion,
+  "io.circe" %% "circe-parser"  % circeVersion
+)
 
 scalacOptions ++= Seq(
   "-deprecation",                  // Emit warning and location for usages of deprecated APIs.
