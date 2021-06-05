@@ -1,10 +1,13 @@
-package com.stocks_analyzer
+package com.stocks_analyzer.stock
+
+import com.stocks_analyzer.Stock
 
 import com.twitter.finagle.Service
 import com.twitter.util.Future
+
 import io.circe.Json
-import io.circe.parser.parse
 import io.circe.generic.auto._
+import io.circe.parser.parse
 
 import scala.io.Source
 
