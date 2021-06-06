@@ -8,7 +8,10 @@ final case class Stock(
     lot: Int,
     currency: String,
     name: String
-)
+) {
+  def shareUrl: String =
+    s"https://www.tinkoff.ru/invest/stocks/${ticker.toUpperCase}"
+}
 
 final case class CandleResponse(
     figi: String,
@@ -28,6 +31,6 @@ final case class Candle(
     // min
     l: Double,
     // value
-    v: Int,
+    v: Double,
     time: String
 )
