@@ -59,7 +59,7 @@ object CandlesForAllStocksService {
                       }
                   )
                 )
-                .delayed(2.minute)
+                .delayed(2.minute) // for api limits
             )
             .map(_.flatten.flatten.toList)
       } yield bestStocks
