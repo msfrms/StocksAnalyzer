@@ -50,8 +50,10 @@ object CandleService {
             .as[CandleResponse]
 
           result match {
-            case Left(value)  => Future.exception(value)
-            case Right(value) => Future.value(value.candles)
+            case Left(value) =>
+              Future.exception(new Throwable(s"error by figi: $figi", value))
+            case Right(value) =>
+              Future.value(value.candles)
           }
         }
     )
