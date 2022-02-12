@@ -129,3 +129,6 @@ dmypy.json
 .pyre/
 .idea
 .bsp
+*.DS_Store
+stock_for_all_time
+stocks

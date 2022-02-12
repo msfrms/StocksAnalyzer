@@ -9,6 +9,10 @@ val circeVersion   = "0.13.0"
 
 libraryDependencies += "com.twitter" %% "finagle-http" % finagleVersion
 
+libraryDependencies += "com.norbitltd" %% "spoiwo" % "2.0.0"
+
+libraryDependencies += "org.typelevel" %% "cats-core" % "2.3.0"
+
 libraryDependencies ++= Seq(
   "io.circe" %% "circe-core"    % circeVersion,
   "io.circe" %% "circe-generic" % circeVersion,
